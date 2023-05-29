@@ -13,3 +13,7 @@
 .feature-user > footer {
   @apply bg-color-neutral p-md flex justify-between;
 }
+
+.feature-user--blocked {
+  @apply opacity-10;
+}

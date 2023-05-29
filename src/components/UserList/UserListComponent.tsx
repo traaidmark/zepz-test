@@ -13,7 +13,7 @@ import './style.css';
 const UserList: React.FC = () => {
   
   const {data, error, loading} = useSelector((state) => state.repositories);
-  const {fetchUsers} = useActions();
+  const {fetchUsers, blockUser} = useActions();
 
   useEffect(() => {
     if (data.length === 0 && !loading && !error) {
@@ -35,11 +35,12 @@ const UserList: React.FC = () => {
       {
         data.map((i) => (
           <User 
+            account_id={i.account_id}
             name={i.name}
             imgUrl={i.imgUrl}
             reputation={i.reputation} 
             isBlocked={i.isBlocked}
-            isFollowed={i.isFollowed} 
+            isFollowed={i.isFollowed}
           />
         ))
       }

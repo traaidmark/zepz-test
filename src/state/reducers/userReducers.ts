@@ -34,6 +34,20 @@ const userReducer = (state: UsersState = initialState, action: Action): UsersSta
         error: action.payload,
         data: [],
       }
+    case ActionType.USER_BLOCK:
+      return {
+        loading: false,
+        error: null,
+        data: state.data.map(i => {
+          if(i.account_id === action.payload) {
+            return {
+              ...i,
+              isBlocked: true,
+            }
+          }
+          return i;
+        }),
+      }
     default:
       return state;
   }

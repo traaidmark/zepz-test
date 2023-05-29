@@ -5,6 +5,7 @@ import { Dispatch } from 'redux';
 
 import { API, USER_ENDPOINT } from '../../shared/static/api';
 import { ServerItemModel } from '../../shared/models/ServerResponseModel';
+import { UserModel } from '../../shared/models/UserModel';
 
 export const fetchUsers = () => {
   return async (dispatch: Dispatch<Action>) => {
@@ -56,7 +57,7 @@ export const fetchUsers = () => {
               "silver": 9094,
               "gold": 859
             },
-            "account_id": 11683,
+            "account_id": 11684,
             "is_employee": false,
             "last_modified_date": 1685089521,
             "last_access_date": 1685097063,
@@ -82,7 +83,7 @@ export const fetchUsers = () => {
               "silver": 9094,
               "gold": 859
             },
-            "account_id": 11683,
+            "account_id": 11685,
             "is_employee": false,
             "last_modified_date": 1685089521,
             "last_access_date": 1685097063,
@@ -107,7 +108,7 @@ export const fetchUsers = () => {
               "silver": 9094,
               "gold": 859
             },
-            "account_id": 11683,
+            "account_id": 11686,
             "is_employee": false,
             "last_modified_date": 1685089521,
             "last_access_date": 1685097063,
@@ -132,7 +133,7 @@ export const fetchUsers = () => {
               "silver": 9094,
               "gold": 859
             },
-            "account_id": 11683,
+            "account_id": 11687,
             "is_employee": false,
             "last_modified_date": 1685089521,
             "last_access_date": 1685097063,
@@ -159,8 +160,9 @@ export const fetchUsers = () => {
       }
 
 
-      const remodelData = data.items.map((i: ServerItemModel) => {
+      const remodelData: UserModel[] = data.items.map((i: ServerItemModel) => {
         return {
+          account_id: i.account_id,
           imgUrl: i.profile_image,
           name: i.display_name,
           reputation: i.reputation,
@@ -183,4 +185,15 @@ export const fetchUsers = () => {
       }
     }
   }
+};
+
+export const blockUser = (id: number) => {
+  return (dispatch: Dispatch<Action>) => {
+
+    dispatch({
+      type: ActionType.USER_BLOCK,
+      payload: id,
+    })
+
+  };
 };

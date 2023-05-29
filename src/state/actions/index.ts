@@ -15,4 +15,10 @@ interface FetchUserActionError {
   payload: string;
 }
 
-export type Action = FetchUserAction | FetchUserActionSuccess | FetchUserActionError;
+interface BlockUser {
+  type: ActionType.USER_BLOCK;
+  payload: number;
+}
+
+export type Action = FetchUserAction | FetchUserActionSuccess | FetchUserActionError | BlockUser;
+
