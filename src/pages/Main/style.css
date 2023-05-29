@@ -1,3 +1,8 @@
 .page {
-  @apply bg-color-accent;
+  @apply min-h-screen bg-color-light;
 }
+
+.page__body {
+  @apply p-lg;
+}
+

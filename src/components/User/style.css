@@ -1,0 +1,15 @@
+.feature-user {
+  @apply bg-color-lightest rounded-lg overflow-hidden relative;
+}
+.feature-user > header {
+  @apply p-md text-center bg-[url('/bg-florals.png')] flex justify-center;
+}
+.feature-user > header > img {
+  @apply rounded-full w-[150px] h-[150px] border-[5px] border-color-light;
+}
+.feature-user > div {
+  @apply p-md text-center;
+}
+.feature-user > footer {
+  @apply bg-color-neutral p-md flex justify-between;
+}

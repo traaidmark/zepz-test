@@ -1,0 +1,19 @@
+.feature-sidebar {
+  @apply bg-color-lightest;
+}
+
+.feature-sidebar > header {
+  @apply  p-lg flex flex-col items-center;
+}
+.feature-sidebar > header > img {
+  @apply w-[100px] h-[100px] mb-lg;
+}
+.feature-sidebar > header > h2 {
+  @apply text-color-primary mb-md;
+}
+.feature-sidebar > header > h2 > strong{
+  @apply text-color-accent;
+}
+.feature-sidebar > header > p {
+  @apply text-color-darker text-lg;
+}
