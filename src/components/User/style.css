@@ -1,18 +1,19 @@
 .feature-user {
-  @apply bg-color-lightest rounded-lg overflow-hidden relative border-[5px] border-color-lightest;
+  @apply bg-color-lightest rounded-lg overflow-hidden relative border-[5px] border-color-lightest flex flex-col-reverse;
 }
-.feature-user > header {
-  @apply p-md text-center bg-[url('/bg-florals.png')] flex justify-center relative;
-}
-.feature-user > header > img {
-  @apply rounded-full w-[150px] h-[150px] border-[5px] border-color-light;
-}
-.feature-user > div {
+
+.feature-user__header {
   @apply p-md text-center;
 }
-.feature-user > footer {
-  @apply bg-color-neutral p-md flex justify-between;
+
+
+.feature-user__info {
+  @apply p-md text-center bg-[url('/bg-florals.png')] flex justify-center relative;
 }
+.feature-user__info > img {
+  @apply rounded-full w-[150px] h-[150px] border-[5px] border-color-light;
+}
+
 
 .feature-user__flag {
   @apply p-sm absolute top-0 right-0 rounded-bl-lg;
@@ -21,21 +22,44 @@
   @apply w-md h-md text-color-darkest;
 }
 
-.feature-user--blocked > header > .feature-user__flag {
+.feature-user__nav {
+    @apply bg-color-primary flex flex-col text-color-lightest absolute top-0 left-0 bottom-0 p-sm translate-x-[-100%] transition-transform duration-200 ease-in-out;
+}
+
+.feature-user__nav > button {
+    @apply flex flex-col items-center;
+}
+
+.feature-user__nav > button:not(:last-child) {
+    @apply border-b-2 border-color-dark mb-sm pb-sm;
+}
+
+.feature-user__nav svg {
+    @apply w-md h-md text-color-light;
+}
+
+/* States */
+
+.feature-user--blocked .feature-user__flag {
   @apply bg-color-red-neutral ;
 }
 
-.feature-user--blocked > header {
+.feature-user--blocked .feature-user__info {
   @apply bg-[url('/bg-florals-light.png')] ;
 }
 
-.feature-user--blocked > div {
+.feature-user--blocked .feature-user__header {
   @apply opacity-10;
 }
 .feature-user--followed {
   @apply border-[5px] border-color-green-neutral;
 }
 
-.feature-user--followed > header > .feature-user__flag {
+.feature-user--followed .feature-user__flag {
   @apply bg-color-green-neutral ;
 }
+
+.feature-user--active-drawer .feature-user__nav {
+  @apply translate-x-0;
+}
+
