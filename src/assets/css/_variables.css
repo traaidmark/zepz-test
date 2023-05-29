@@ -1,0 +1,73 @@
+/* STYLESHEETS [ VARIABLES ] ################################################ */
+
+@tailwind base;
+
+/* 1. BASE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@layer base {
+  html {
+    
+    /* 1.2. SYSTEM COLORS --------------------------------------------------- */
+
+    --color-darkest: 17 24 39;
+    --color-darker: 75 85 99;
+    --color-dark: 156 163 175;
+    --color-neutral: 209 213 219;
+    --color-light: 243 244 246;
+    --color-lighter: 249 250 251;
+    --color-lightest: 255 255 255;
+
+    --color-red-dark: 220 38 38;
+    --color-red-neutral: 248 113 113;
+    --color-red-light: 254 202 202;
+
+    --color-green-dark: 5 150 105;
+    --color-green-neutral: 110 231 183;
+    --color-green-light: 209 250 229;
+
+    --color-yellow-dark: 217 119 6;
+    --color-yellow-neutral: 252 211 77;
+    --color-yellow-light: 254 243 199;
+
+    --color-blue-dark: 8 145 178;
+    --color-blue-neutral: 103 232 249;
+    --color-blue-light: 207 250 254;
+
+    /* 1.2. END ------------------------------------------------------------- */
+
+    /* 1.2. BASE ------------------------------------------------------------ */
+
+    --color-base: var(--color-light);
+
+    /* 1.2. END ------------------------------------------------------------- */
+
+    /* 1.2. TYPOGRAPHY ------------------------------------------------------ */
+
+    --color-heading:                  var(--color-darkest);
+    --color-subheading:               var(--color-dark);
+    --color-body:                     var(--color-darker);
+    --color-sub:                      var(--color-dark);
+    --color-bold:                     var(--color-darkest);
+
+    --color-link:                     var(--color-dark);
+    --color-link-hover:               var(--color-accent);
+
+    /* 1.2. END ------------------------------------------------------------- */
+
+    /* 1.3. GUTTERS --------------------------------------------------------- */
+
+    --gutter-sm: 10px;
+    --gutter-md: 20px;
+    --gutter-lg: 40px;
+    --gutter-xl: 80px;
+    --gutter-xxl: 120px;
+
+    /* 1.3. END ------------------------------------------------------------- */
+
+  }
+
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

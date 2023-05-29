@@ -1,0 +1,43 @@
+/* STYLESHEETS [ BRAND ] #################################################### */
+
+:root {
+
+  /* 1. COLOR VARIANTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  --color-primary:                  22 33 62;
+  --color-secondary:                60 127 170;
+  --color-accent:                   233 69 96;
+
+  /* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  /* 2. TYPOGRAPHY ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  --font-primary:                   "Inter", helvetica,arial;
+  --font-secondary:                 "Poppins", helvetica,arial;
+
+  --color-heading:                  var(--color-primary);
+  --color-subheading:               var(--color-dark);
+  --color-body:                     var(--color-darker);
+  --color-sub:                      var(--color-dark);
+  --color-bold:                     var(--color-primary);
+
+  --color-link:                     var(--color-accent);
+  --color-link-hover:               var(--color-accent);
+
+  /* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  /* 3. BUTTONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+  --button-radius: 0px;
+  --button-text-color: rgb(var(--color-white-rgb));
+  --button-text-color-hover: rgb(var(--color-white-rgb));
+  --button-bg-color: rgb(var(--color-accent));
+  --button-bg-color-hover: rgb(var(--color-accent));
+  --button-border-color: rgb(var(--color-accent));
+  --button-border-color-hover: rgb(var(--color-accent));
+
+  /* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+}
+
+/* END OF FILE ############################################################## */
