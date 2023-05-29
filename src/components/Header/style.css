@@ -1,19 +1,20 @@
-.feature-sidebar {
-  @apply bg-color-lightest;
+.feature-header {
+  @apply bg-color-primary pl-lg;
 }
 
-.feature-sidebar > header {
-  @apply  p-lg flex flex-col items-center;
+.feature-header > div{
+  @apply bg-color-light p-lg;
 }
-.feature-sidebar > header > img {
+
+.feature-header img {
   @apply w-[100px] h-[100px] mb-lg;
 }
-.feature-sidebar > header > h2 {
-  @apply text-color-primary mb-md;
+.feature-header h1 {
+  @apply text-color-primary mb-md text-9xl;
 }
-.feature-sidebar > header > h2 > strong{
+.feature-header h1 > strong{
   @apply text-color-accent;
 }
-.feature-sidebar > header > p {
-  @apply text-color-darker text-lg;
+.feature-header p {
+  @apply text-color-darker text-xl;
 }
