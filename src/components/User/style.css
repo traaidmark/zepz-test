@@ -1,8 +1,8 @@
 .feature-user {
-  @apply bg-color-lightest rounded-lg overflow-hidden relative;
+  @apply bg-color-lightest rounded-lg overflow-hidden relative border-[5px] border-color-lightest;
 }
 .feature-user > header {
-  @apply p-md text-center bg-[url('/bg-florals.png')] flex justify-center;
+  @apply p-md text-center bg-[url('/bg-florals.png')] flex justify-center relative;
 }
 .feature-user > header > img {
   @apply rounded-full w-[150px] h-[150px] border-[5px] border-color-light;
@@ -14,9 +14,28 @@
   @apply bg-color-neutral p-md flex justify-between;
 }
 
-.feature-user--blocked {
+.feature-user__flag {
+  @apply p-sm absolute top-0 right-0 rounded-bl-lg;
+}
+.feature-user__flag > svg {
+  @apply w-md h-md text-color-darkest;
+}
+
+.feature-user--blocked > header > .feature-user__flag {
+  @apply bg-color-red-neutral ;
+}
+
+.feature-user--blocked > header {
+  @apply bg-[url('/bg-florals-light.png')] ;
+}
+
+.feature-user--blocked > div {
   @apply opacity-10;
 }
 .feature-user--followed {
   @apply border-[5px] border-color-green-neutral;
+}
+
+.feature-user--followed > header > .feature-user__flag {
+  @apply bg-color-green-neutral ;
 }
