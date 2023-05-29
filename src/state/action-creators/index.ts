@@ -191,7 +191,18 @@ export const blockUser = (id: number) => {
   return (dispatch: Dispatch<Action>) => {
 
     dispatch({
-      type: ActionType.USER_BLOCK,
+      type: ActionType.USER_TOGGLE_BLOCK,
+      payload: id,
+    })
+
+  };
+};
+
+export const toggleFollow = (id: number) => {
+  return (dispatch: Dispatch<Action>) => {
+
+    dispatch({
+      type: ActionType.USER_TOGGLE_FOLLOW,
       payload: id,
     })
 

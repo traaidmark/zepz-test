@@ -34,7 +34,7 @@ const userReducer = (state: UsersState = initialState, action: Action): UsersSta
         error: action.payload,
         data: [],
       }
-    case ActionType.USER_BLOCK:
+    case ActionType.USER_TOGGLE_BLOCK:
       return {
         loading: false,
         error: null,
@@ -42,12 +42,27 @@ const userReducer = (state: UsersState = initialState, action: Action): UsersSta
           if(i.account_id === action.payload) {
             return {
               ...i,
-              isBlocked: true,
+              isBlocked: i.isBlocked ? false : true,
+              isFollowed: false,
             }
           }
           return i;
         }),
       }
+      case ActionType.USER_TOGGLE_FOLLOW:
+        return {
+          loading: false,
+          error: null,
+          data: state.data.map(i => {
+            if(i.account_id === action.payload) {
+              return {
+                ...i,
+                isFollowed: i.isFollowed ? false : true,
+              }
+            }
+            return i;
+          }),
+        }
     default:
       return state;
   }

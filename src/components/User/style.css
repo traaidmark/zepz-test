@@ -17,3 +17,6 @@
 .feature-user--blocked {
   @apply opacity-10;
 }
+.feature-user--followed {
+  @apply border-[5px] border-color-green-neutral;
+}

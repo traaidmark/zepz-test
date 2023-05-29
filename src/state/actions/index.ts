@@ -16,9 +16,13 @@ interface FetchUserActionError {
 }
 
 interface BlockUser {
-  type: ActionType.USER_BLOCK;
+  type: ActionType.USER_TOGGLE_BLOCK;
+  payload: number;
+}
+interface ToggleFollowUser {
+  type: ActionType.USER_TOGGLE_FOLLOW;
   payload: number;
 }
 
-export type Action = FetchUserAction | FetchUserActionSuccess | FetchUserActionError | BlockUser;
+export type Action = FetchUserAction | FetchUserActionSuccess | FetchUserActionError | BlockUser | ToggleFollowUser;
 
