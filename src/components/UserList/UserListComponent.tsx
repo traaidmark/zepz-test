@@ -13,7 +13,7 @@ import './style.css';
 const UserList: React.FC = () => {
   
   const {data, error, loading} = useSelector((state) => state.repositories);
-  const {fetchUsers, blockUser} = useActions();
+  const {fetchUsers} = useActions();
 
   useEffect(() => {
     if (data.length === 0 && !loading && !error) {

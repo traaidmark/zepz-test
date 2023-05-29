@@ -7,7 +7,7 @@ import {useConnection} from '../../hooks/useConnection';
 import './style.css';
 
 
-const IndexPage: React.FC = () => {
+const MainPage: React.FC = () => {
 
   const {isConnected} = useConnection();
 
@@ -22,4 +22,4 @@ const IndexPage: React.FC = () => {
   )
 }
 
-export default IndexPage;
+export default MainPage;
