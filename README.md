@@ -67,14 +67,16 @@ I keep css within css files, as it promotes separation of concerns, and avoids t
 
 The argument can be made that you might as well just use vanilla css, and I want to agree, but I have experienced that Tailwind's tooling is just awesome, and the utility aspect, if used correctly, is awesome.
 
+I designed in the browser so spent probably too much time getting things the way I felt looked okay.
+
 ## Timekeeping
 
 These are the times I spent on each section of the task:
 
-| Task           | Time     |
-| -------------- | -------- |
-| Review         | 01 Hours |
-| Design         | 02 Hours |
-| Implementation | 03 Hours |
-| Testing        | 03 Hours |
-| Documentation  | 01 Hours |
+| Task           | Time        |
+| -------------- | ----------- |
+| Review         | 01 Hours    |
+| Design         | 03 Hours    |
+| Implementation | 03 Hours    |
+| Testing        | Too long... |
+| Documentation  | 01 Hours    |
