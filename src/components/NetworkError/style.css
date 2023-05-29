@@ -1,0 +1,9 @@
+.feature-message {
+  @apply bg-color-red-neutral p-1 flex gap-sm rounded-lg;
+}
+.feature-message > svg {
+  @apply w-lg h-lg text-color-darkest;
+}
+.feature-message > div {
+  @apply bg-color-lightest flex-1 p-md rounded-lg;
+}

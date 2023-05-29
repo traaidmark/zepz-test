@@ -3,6 +3,6 @@
 }
 
 .page__body {
-  @apply p-lg;
+  @apply p-sm md:p-lg;
 }
 
