@@ -21,9 +21,8 @@ const UserList: React.FC = () => {
     }
   }, [data,loading,error]);
 
-
   if(loading) {
-    return <p>I am loading!</p>;
+    return <Loader />;
   }
 
   if(error) {
